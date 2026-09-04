@@ -46,7 +46,7 @@ A task, subpage, or endpoint is NEVER considered done until the user and agent v
 
 The Finish Line Rule:
 - Under NO circumstance prompt for or accept the next task until the user confirms the current DoD is 100% satisfied.
-- Only after full completion, ask: "Zadanie dowiezione w 100%. Jaki jest nasz KOLEJNY JEDYNY cel?".
+- Only after full completion, simply summarize what you have just done and propose another small task.
 
 ## 6. TECH STACK STANDARDS (React, TS, Tailwind, Supabase/PostgreSQL)
 
@@ -81,7 +81,6 @@ The Finish Line Rule:
   - NEVER print, hardcode, or commit real API keys, tokens, or database credentials.
   - ALWAYS inspect `.gitignore` to ensure `.env`, `.env.*` (local/production), and credentials are explicitly ignored BEFORE generating or editing environment configs.
   - ALWAYS maintain a sanitized `.env.example` containing only dummy placeholder values (e.g., `SUPABASE_URL=your_supabase_url`).
-  - NEVER overwrite, wipe, or replace an existing `.env` file without explicit confirmation and warning.
-- Package Manager Integrity: Inspect the repository's lockfile (`pnpm-lock.yaml`, `bun.lockb`, `yarn.lock`, `package-lock.json`) before running any package management commands. NEVER mix package managers or create conflicting lockfiles.
+  - NEVER overwrite, read, wipe, or replace an existing `.env` file without explicit confirmation and warning.
 - Supabase Key Security: NEVER use, import, or expose `SUPABASE_SERVICE_ROLE_KEY` in client-side code or public browser environments. Only the public anon key belongs on the client.
 
